@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jfreechart-1.0.19-experimental.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jfreechart-1.0.19-swt.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jfreesvg-2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jmock-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jmock-junit3-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jmock-junit4-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jmock-legacy-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/jmock-script-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/orsoncharts-1.4-eval-nofx.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/orsonpdf-1.6-eval.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/servlet.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a3/swtgraphics2d.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/bsh-core-2.0b4.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/cglib-2.1_3-src.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/gnujaxp.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/jcommon-1.0.0-rc1-cvs.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/jcommon-1.0.5.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/junit.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/objenesis-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/jasdeepcingh/eclipse-workspace/JFreeChart_Lab3/lib/a2/servlet.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
