@@ -22,20 +22,19 @@ You can **paste this directly into your Markdown report**.
 
 # 1 Introduction
 
-Software testing plays a central role in ensuring the dependability and reliability of complex software systems. As systems grow in size and complexity, manually verifying all behaviors becomes infeasible. Therefore, systematic testing techniques and coverage criteria are used to evaluate whether test suites adequately exercise program behavior.
+Software reliability depends heavily on the quality and adequacy of the testing process. Unit testing is one of the most widely used techniques for verifying the correctness of individual components in a software system. In addition to validating functional behavior, modern testing practices emphasize evaluating the adequacy of a test suite using structural analysis techniques. White-box testing provides a systematic way to achieve this by analyzing the internal structure of the source code and ensuring that test cases exercise critical execution paths.
 
-The objective of this lab was to evaluate the adequacy of unit tests using several structural testing criteria, including **line coverage, branch coverage, method coverage, and data-flow coverage**. The subject system used for experimentation was the **JFreeChart library**, specifically focusing on the `DataUtilities` class.
+This assignment focuses on evaluating and improving the adequacy of a unit test suite using code coverage criteria. Code coverage metrics provide quantitative indicators of how thoroughly a test suite exercises the system under test (SUT). Common structural coverage criteria include statement coverage, branch (decision) coverage, and condition coverage, each representing a progressively stronger level of testing completeness. By measuring these metrics, testers can identify untested regions of code and design additional test cases to improve the overall quality of the test suite.
 
-The lab consisted of the following major tasks:
+The system under test in this assignment is JFreeChart, an open-source Java framework used for creating charts and data visualizations. JFreeChart is designed to be integrated into other applications as a reusable component, making the correctness and robustness of its API functions critical. Two classes from the org.jfree.data package—DataUtilities and Range—are selected for detailed analysis and testing in this assignment.
 
-* Designing new unit tests to improve coverage
-* Identifying unreachable code paths
-* Performing manual **data-flow analysis**
-* Measuring coverage using automated coverage tools
-* Evaluating the strengths and limitations of different coverage metrics
+To perform the testing and coverage analysis, the JUnit testing framework is used to execute unit tests within the Eclipse development environment, while code coverage tools are used to measure structural coverage metrics. Coverage tools help identify the portions of code that are executed by the existing test suite and reveal areas that require additional test cases to achieve higher coverage.
 
-The results provide insights into how structural testing criteria can guide the design of more effective test suites and improve the reliability of software components.
+In addition to automated coverage measurement, this assignment also introduces data-flow testing, which examines how variables are defined and subsequently used during program execution. Data-flow coverage focuses on identifying definition-use (DU) pairs, ensuring that variable definitions propagate correctly to their uses along feasible execution paths. This analysis provides deeper insight into potential faults that may not be detected through control-flow coverage alone.
 
+The objectives of this assignment are therefore threefold: to measure the adequacy of an existing test suite using coverage tools, to design additional unit tests that increase structural coverage, and to manually analyze data-flow coverage for selected methods. Through these activities, the assignment demonstrates how coverage-based testing techniques can be used to systematically improve test effectiveness while highlighting both the strengths and limitations of coverage metrics as indicators of software quality.
+
+If you want, I can also give you a slightly shorter version (≈180 words) that professors sometimes prefer because long introductions lose marks in software engineering reports.
 ---
 
 # 2 Manual data-flow coverage calculations for X and Y methods
