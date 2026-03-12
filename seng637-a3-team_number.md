@@ -85,9 +85,11 @@ During analysis, certain paths were identified as **infeasible**.
 
 For example, the second loop in `calculateColumnTotal` has the condition:
 
+
 ```
 for (int r2 = 0; r2 > rowCount; r2++)
 ```
+<img width="718" height="479" alt="spisex" src="https://github.com/user-attachments/assets/3424c4b9-aec1-4e5a-82a1-faed7bebb3cc" />
 
 Since `rowCount` is always non-negative, this loop condition cannot evaluate to true. Therefore, the entire loop body is unreachable. 
 
