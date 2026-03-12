@@ -34,7 +34,7 @@ In addition to automated coverage measurement, this assignment also introduces d
 
 The objectives of this assignment are therefore threefold: to measure the adequacy of an existing test suite using coverage tools, to design additional unit tests that increase structural coverage, and to manually analyze data-flow coverage for selected methods. Through these activities, the assignment demonstrates how coverage-based testing techniques can be used to systematically improve test effectiveness while highlighting both the strengths and limitations of coverage metrics as indicators of software quality.
 
-If you want, I can also give you a slightly shorter version (≈180 words) that professors sometimes prefer because long introductions lose marks in software engineering reports.
+
 ---
 
 # 2 Manual data-flow coverage calculations for X and Y methods
