@@ -1369,4 +1369,78 @@ public class DataUtilitiesTest {
         KeyedValues result = DataUtilities.getCumulativePercentages(data);
         assertCumulativeMatchesUniform(result, HIGH_DELTA);
     }
+    
+    
+    
+//    @Test(timeout = 2000)
+//    public void testNegativeRowCountForCalculateColumnTotal() {
+//    	Values2D values = context.mock(Values2D.class);
+//        context.checking(new Expectations() {
+//            {
+//                allowing(values).getRowCount();
+//                will(returnValue(-1));
+//                allowing(values).getValue(with(any(int.class)), 0);
+//                will(returnValue(1.0));
+//            }
+//        });
+//        
+//        thrown.expect(Exception.class);
+//        DataUtilities.calculateColumnTotal(values, 0);
+//    }
+//    
+//    
+//    @Test(timeout = 2000)
+//    public void testNegativeRowCountForCalculateRowTotal() {
+//    	Values2D values = context.mock(Values2D.class);
+//        context.checking(new Expectations() {
+//            {
+//                allowing(values).getColumnCount();
+//                will(returnValue(-1));
+//                allowing(values).getValue(0, with(any(int.class)));
+//                will(returnValue(1.0));
+//            }
+//        });
+//        
+//        thrown.expect(Exception.class);
+//        DataUtilities.calculateRowTotal(values, 0);
+//    }
+    
+   
+    
+   
+  @Test
+  public void testValues2DWithANullValueForCalculateColumnTotal() {
+  	Values2D values = context.mock(Values2D.class);
+      context.checking(new Expectations() {
+          {
+              allowing(values).getRowCount();
+              will(returnValue(1));
+              allowing(values).getValue(0, 0);
+              will(returnValue(null));
+          }
+      });
+      
+      assertEquals(0.0,
+              DataUtilities.calculateColumnTotal(values, 0),
+              0.000000001d);
+  }
+  
+  
+  @Test
+  public void testValues2DWithANullValueForCalculateRowTotal() {
+  	Values2D values = context.mock(Values2D.class);
+      context.checking(new Expectations() {
+          {
+              allowing(values).getColumnCount();
+              will(returnValue(1));
+              allowing(values).getValue(0, 0);
+              will(returnValue(null));
+          }
+      });
+      assertEquals(0.0,
+              DataUtilities.calculateRowTotal(values, 0),
+              0.000000001d);
+  }
+    
+    
 }
