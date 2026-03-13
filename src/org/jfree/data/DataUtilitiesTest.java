@@ -40,7 +40,7 @@ public class DataUtilitiesTest {
 	 * 3.1 Method: Testing calculateColumnTotal(Values2D data, int column)
      */
 
- /*
+    /*
 	 * Equivalence Classes Test Cases (Weak)
      */
     /**
@@ -1372,42 +1372,14 @@ public class DataUtilitiesTest {
     
     
     
-//    @Test(timeout = 2000)
-//    public void testNegativeRowCountForCalculateColumnTotal() {
-//    	Values2D values = context.mock(Values2D.class);
-//        context.checking(new Expectations() {
-//            {
-//                allowing(values).getRowCount();
-//                will(returnValue(-1));
-//                allowing(values).getValue(with(any(int.class)), 0);
-//                will(returnValue(1.0));
-//            }
-//        });
-//        
-//        thrown.expect(Exception.class);
-//        DataUtilities.calculateColumnTotal(values, 0);
-//    }
-//    
-//    
-//    @Test(timeout = 2000)
-//    public void testNegativeRowCountForCalculateRowTotal() {
-//    	Values2D values = context.mock(Values2D.class);
-//        context.checking(new Expectations() {
-//            {
-//                allowing(values).getColumnCount();
-//                will(returnValue(-1));
-//                allowing(values).getValue(0, with(any(int.class)));
-//                will(returnValue(1.0));
-//            }
-//        });
-//        
-//        thrown.expect(Exception.class);
-//        DataUtilities.calculateRowTotal(values, 0);
-//    }
-    
    
+  /*
+   * New Test cases to increase code coverage
+   */
     
-   
+  /**
+   * Test case for calculateColumnTotal, which increases branch coverage
+   */
   @Test
   public void testValues2DWithANullValueForCalculateColumnTotal() {
   	Values2D values = context.mock(Values2D.class);
@@ -1425,7 +1397,9 @@ public class DataUtilitiesTest {
               0.000000001d);
   }
   
-  
+  /**
+   * Test case for calculateRowTotal, which increases branch coverage
+   */
   @Test
   public void testValues2DWithANullValueForCalculateRowTotal() {
   	Values2D values = context.mock(Values2D.class);
