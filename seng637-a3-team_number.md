@@ -273,11 +273,9 @@ No additional test cases were required because the existing tests already cover 
 
 No additional test cases were required since all feasible lines were already covered.
 
-*(Insert Screenshot – createNumberArray2D coverage)*
+![Coverage visualization for createNumberArray2D](images/image11.png)
 
-```text
-[ IMAGE PLACEHOLDER – createNumberArray2D coverage ]
-```
+*Figure : Line coverage visualization for the `createNumberArray2D` method showing that all executable statements are covered by the existing test suite.*
 
 ### calculateColumnTotal
 
