@@ -181,9 +181,7 @@ Similar infeasible structures were also identified in the methods:
 Therefore, the maximum achievable data-flow coverage corresponds to the **set of reachable DU pairs rather than the full theoretical set**.
 
 ---
-Great — the **next section in your template is Section 3: Testing Strategy**, and we will convert your **Test Plan for DataUtilities** into a **PI-level structured section** while **keeping all your content** and **leaving space for the screenshots/images exactly like your PDF shows**. The screenshots from your document (for infeasible paths, line coverage, branch coverage, etc.) should be inserted where indicated. 
 
-Below is **ONLY Section 3**, ready to paste.
 
 ---
 
