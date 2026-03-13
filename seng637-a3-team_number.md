@@ -604,11 +604,9 @@ CodeCover is a coverage tool designed to support advanced coverage metrics inclu
 
 During the lab, an attempt was made to install the **CodeCover Eclipse plugin** using the standard Eclipse update mechanism.
 
-*(Insert Screenshot – CodeCover installation instructions)*
+![CodeCover installation error in Eclipse](images/image3.png)
 
-```text
-[IMAGE PLACEHOLDER — CodeCover installation instructions]
-```
+*Figure X: Error encountered while attempting to install the CodeCover Eclipse plugin due to the repository not being accessible.*
 
 However, an error occurred during installation, preventing the plugin from being successfully installed in the development environment.
 
