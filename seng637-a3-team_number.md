@@ -572,11 +572,9 @@ Because none of the evaluated coverage tools supported **condition coverage**, m
 
 The results indicate that **all methods in the `DataUtilities` class were executed by the test suite**, and therefore no additional tests were required to improve method coverage.
 
-*(Insert Screenshot – Method Coverage Results)*
+![Method coverage results for DataUtilities](images/image4.png)
 
-```
-[ IMAGE PLACEHOLDER – Method Coverage Results ]
-```
+*Figure: Method coverage report showing that all methods in the DataUtilities class were executed during testing.*
 
 The method coverage table illustrates the number of methods executed during testing and confirms that the test suite successfully invokes each method under analysis. 
 
