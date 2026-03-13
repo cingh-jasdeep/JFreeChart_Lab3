@@ -279,11 +279,9 @@ No additional test cases were required since all feasible lines were already cov
 
 All feasible statements were already covered by the existing test cases.
 
-*(Insert Screenshot – calculateColumnTotal coverage)*
+![Unreachable loop in calculateColumnTotal](images/image5.png)
 
-```text
-[ IMAGE PLACEHOLDER – calculateColumnTotal coverage ]
-```
+*Figure X: Infeasible loop in `calculateColumnTotal` caused by the condition `r2 > rowCount`, which prevents the loop body from executing.*
 
 ### calculateRowTotal
 
