@@ -519,6 +519,9 @@ The line coverage results are shown below.
 
 According to the coverage report, the `DataUtilities` class achieved a high level of statement execution, and the remaining uncovered lines correspond primarily to infeasible code paths. The coverage table presented in the screenshot illustrates the percentage of covered lines and the number of executed statements for each method. 
 
+![Line coverage results for DataUtilities](images/image9.png)
+
+*Figure: Line coverage report showing the number of covered and missed lines for each method in the DataUtilities class.*
 ---
 
 ## Branch Coverage Results
