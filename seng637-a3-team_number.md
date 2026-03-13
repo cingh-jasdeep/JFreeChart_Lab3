@@ -609,22 +609,6 @@ Consequently, additional test cases cannot increase coverage beyond the levels r
 
 ---
 
-Got it 👍 — yes, **we are on Section 6 now**.
-Sections so far:
-
-1. Introduction ✅
-2. Manual Data Flow Coverage ✅
-3. Testing Strategy / Test Plan ✅
-4. Test Cases Description ✅
-5. Coverage Results ✅
-6. **Pros and Cons of Coverage Tools and Metrics** ← **NOW**
-
-Your uploaded PDF already contains the tool discussion on **pages 1–2**, including CodeCover installation failure and the fact that Clover, JaCoCo, and Coverlipse do not support condition coverage. 
-
-Below is the **PI-level Section 6 in Markdown**, keeping your structure.
-
----
-
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
 Several coverage tools were evaluated during this lab in order to measure the adequacy of the test suite and analyze structural coverage of the `DataUtilities` class. The tools considered include **CodeCover**, **Clover**, **JaCoCo**, and **Coverlipse**. These tools provide different levels of support for coverage metrics such as statement coverage, branch coverage, and method coverage.
