@@ -508,23 +508,6 @@ The objective of this test is to simulate a realistic dataset scenario and verif
 * Improves **overall structural coverage** across multiple iterations.
 
 ---
-Great — now we continue **step-by-step**.
-The **next section after Section 4** in your template is:
-
-# 5 A detailed report of the coverage achieved of each class and method
-
-This section must show:
-
-* Line coverage
-* Branch coverage
-* Method coverage
-* Screenshots (coverage tables)
-
-Your uploaded PDF already contains these screenshots (pages **6–9**) showing coverage results for `DataUtilities`. 
-
-Below is the **PI-level Section 5**, with **places to insert your images exactly**.
-
----
 
 # 5 A detailed report of the coverage achieved of each class and method
 
