@@ -37,29 +37,55 @@ The objectives of this assignment are therefore threefold: to measure the adequa
 
 ---
 
-# 2 Manual data-flow coverage calculations for X and Y methods
+# 2 Manual Data-Flow Coverage Calculations for X and Y Methods
 
-Manual data-flow testing was conducted for the following methods:
+Manual data-flow analysis was conducted for the following methods within the `DataUtilities` class:
 
 * `calculateColumnTotal`
 * `calculateRowTotal`
 
-Data-flow testing focuses on analyzing the relationships between **variable definitions (def)** and **variable uses (use)** throughout the control flow of a program.
+Data-flow testing evaluates the relationships between **variable definitions (def)** and **subsequent uses (use)** along feasible execution paths in the control flow of a program. The objective of this analysis is to identify **Definition–Use (DU) pairs**, which capture how data values propagate through the program and influence computation. By examining DU pairs, testers can determine whether the test suite adequately exercises all meaningful data dependencies within the system under test.
 
-## Data-flow analysis of calculateColumnTotal
+The method `calculateColumnTotal` was selected for detailed analysis. This method computes the sum of values in a specified column of a two-dimensional dataset.
 
-The method computes the total of values in a specified column of a dataset.
-
-Key variables involved include:
+The primary variables involved in the computation include:
 
 * `data`
 * `column`
 * `rowCount`
 * `total`
-* loop variables (`r`, `r2`)
-* intermediate values (`n1`, `n2`)
+* loop control variables (`r`, `r2`)
+* intermediate numeric values (`n1`, `n2`)
 
-The following **definition-use relationships** were identified.
+---
+
+## Data Flow Graph
+
+The **Data Flow Graph (DFG)** illustrates the propagation of variable definitions and uses across the control flow of the `calculateColumnTotal` method.
+
+*(Insert Data Flow Graph Image Here)*
+
+```
+[ DATA FLOW GRAPH IMAGE PLACEHOLDER ]
+```
+
+### Notes
+
+* The `for` loop statement was decomposed into **three separate logical statements** for the purpose of data-flow analysis:
+
+  * loop initialization
+  * loop condition comparison
+  * loop increment
+
+* The original loop variable `n` was renamed to **`n1` and `n2`** during analysis to avoid ambiguity when identifying definition–use relationships.
+
+This decomposition simplifies the identification of variable definitions and uses within iterative constructs and enables more precise tracking of DU pairs.
+
+---
+
+## Def–Use Sets per Statement
+
+The following table summarizes the **definition and use sets for each relevant statement** in the analyzed method.
 
 | Statement | Definition   | Use              |
 | --------- | ------------ | ---------------- |
@@ -71,35 +97,97 @@ The following **definition-use relationships** were identified.
 | 128       | n1           | data, r, column  |
 | 129       |              | n1               |
 | 130       | total        | total, n1        |
+| 131       |              |                  |
+| 132       |              |                  |
 | 133       | r2           | r2, rowCount     |
 | 134       | n2           | data, r2, column |
 | 135       |              | n2               |
 | 136       | total        | total, n2        |
+| 137       |              |                  |
+| 138       |              |                  |
+| 139       |              | total            |
 
-Each **definition-use pair** represents a potential path that should be exercised by test cases.
+These def-use sets form the basis for identifying **all possible DU pairs** in the method.
 
-## Infeasible Paths
+---
 
-During analysis, certain paths were identified as **infeasible**.
+## DU-Pairs per Variable
 
-For example, the second loop in `calculateColumnTotal` has the condition:
+The following table lists all **Definition–Use pairs identified for each variable**.
 
+| Variable | DU-pairs                                                                              |
+| -------- | ------------------------------------------------------------------------------------- |
+| data     | (123,124), (123,126), (123,128), (123,134 *not reachable*)                            |
+| column   | (123,128), (123,134 *not reachable*)                                                  |
+| total    | (125,130), (125,136 *not reachable*), (125,139), (130,139), (136 *not reachable*,139) |
+| rowCount | (126,127), (126,133)                                                                  |
+| r        | (127,127), (127,128)                                                                  |
+| n1       | (128,129), (128,130)                                                                  |
+| r2       | (133,133), (133,134 *not reachable*)                                                  |
+| n2       | (134 *not reachable*,135 *not reachable*), (134 *not reachable*,136 *not reachable*)  |
 
-```
+Some DU pairs are marked as **not reachable** because the corresponding control-flow paths cannot be executed due to program logic constraints.
+
+---
+
+## Reachable DU-Pairs
+
+After removing DU pairs associated with infeasible execution paths, the **set of reachable DU pairs** is obtained.
+
+| Variable | Reachable DU-pairs              |
+| -------- | ------------------------------- |
+| data     | (123,124), (123,126), (123,128) |
+| column   | (123,128)                       |
+| total    | (125,130), (125,139), (130,139) |
+| rowCount | (126,127), (126,133)            |
+| r        | (127,127), (127,128)            |
+| n1       | (128,129), (128,130)            |
+| r2       | (133,133)                       |
+| n2       | —                               |
+
+The DU pairs associated with variable `n2` are unreachable because the corresponding loop structure is never executed.
+
+---
+
+## DU-Pairs Covered per Test Case
+
+The following table summarizes which DU pairs are exercised by the designed unit tests.
+
+| Test Case Name                    | DU-pairs Covered |
+| --------------------------------- | ---------------- |
+| `test_calculateColumnTotal_ect_1` |                  |
+| `test_calculateColumnTotal_ect_2` |                  |
+
+These test cases are designed to exercise the feasible definition-use paths associated with the primary aggregation loop.
+
+---
+
+## Discussion of Infeasible Paths
+
+During the analysis, it was observed that certain control-flow paths within the method are **infeasible**.
+
+Specifically, the second loop in the method has the following condition:
+
+```java
 for (int r2 = 0; r2 > rowCount; r2++)
 ```
-<img width="718" height="479" alt="spisex" src="https://github.com/user-attachments/assets/3424c4b9-aec1-4e5a-82a1-faed7bebb3cc" />
 
-Since `rowCount` is always non-negative, this loop condition cannot evaluate to true. Therefore, the entire loop body is unreachable. 
+Since `rowCount` represents the number of rows in the dataset and therefore cannot be negative, the condition `r2 > rowCount` evaluates to **false at the first iteration**. Consequently, the loop body is **never executed**, rendering all statements inside this loop unreachable.
 
-Similar infeasible paths were observed in:
+As a result:
+
+* DU pairs involving variable `n2` cannot be exercised.
+* Complete DU coverage is **not theoretically achievable** for this method.
+
+Similar infeasible structures were also identified in the methods:
 
 * `calculateRowTotal`
 * `getCumulativePercentages`
 
-Because these paths are unreachable, they cannot be covered by any test case.
+Therefore, the maximum achievable data-flow coverage corresponds to the **set of reachable DU pairs rather than the full theoretical set**.
 
 ---
+
 
 # 3 A detailed description of the testing strategy for the new unit test
 
