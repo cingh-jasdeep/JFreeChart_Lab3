@@ -260,12 +260,9 @@ Line coverage was evaluated to determine whether all executable statements were 
 ### createNumberArray
 
 No additional test cases were required because the existing tests already cover the **maximum number of feasible lines**.
+![Line coverage for createNumberArray](images/image6.png)
 
-*(Insert Screenshot – createNumberArray coverage)*
-
-```text
-[ IMAGE PLACEHOLDER – createNumberArray coverage ]
-```
+*Figure: Line coverage visualization for the `createNumberArray(double[] data)` method showing that all executable statements are exercised by the existing test suite.*
 
 ### createNumberArray2D
 
