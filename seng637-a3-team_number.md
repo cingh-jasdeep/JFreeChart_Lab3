@@ -639,6 +639,9 @@ Clover supports several basic coverage metrics including:
 
 
 However, Clover does **not support condition coverage**, which limits its usefulness when evaluating complex boolean expressions.
+![Clover coverage metrics documentation](images/image8.png)
+
+*Figure: Clover documentation describing the supported coverage metrics including statement coverage, branch coverage, and method coverage.*
 
 ### Advantages
 
