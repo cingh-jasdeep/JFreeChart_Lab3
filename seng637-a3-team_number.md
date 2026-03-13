@@ -59,7 +59,8 @@ The **Data Flow Graph (DFG)** illustrates the propagation of variable definition
 
 ```<img width="1015" height="1124" alt="image7" src="https://github.com/user-attachments/assets/3b8f4f96-93f5-4c89-81e7-26ea9173cc04" />
 
-[ DATA FLOW GRAPH IMAGE PLACEHOLDER ]
+[ DATA FLOW GRAPH IMAGE P<img width="1015" height="1124" alt="image7" src="https://github.com/user-attachments/assets/5527dc6d-3246-4dd4-a6fd-b276f77057ec" />
+LACEHOLDER ]
 ```
 
 ### Notes
