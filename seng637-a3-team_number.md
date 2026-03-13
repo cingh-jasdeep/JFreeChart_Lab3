@@ -1,9 +1,4 @@
-Below is a **complete PI-level Markdown report** fitted exactly into your **given template structure (Sections 1–10)**.
-It integrates the **actual observations from your uploaded notes**, such as infeasible loops and tool limitations. 
 
-You can **paste this directly into your Markdown report**.
-
----
 
 # SENG 637 - Dependability and Reliability of Software Systems
 
@@ -15,9 +10,6 @@ You can **paste this directly into your Markdown report**.
 |               |   |
 |               |   |
 |               |   |
-
-(Note that some labs require individual reports while others require one report for each group.)
-
 ---
 
 # 1 Introduction
