@@ -618,11 +618,9 @@ During the lab, an attempt was made to install the **CodeCover Eclipse plugin** 
 
 However, an error occurred during installation, preventing the plugin from being successfully installed in the development environment.
 
-*(Insert Screenshot – CodeCover installation error)*
+![CodeCover Eclipse Plugin Installation Instructions](images/image10.png)
 
-```text
-[IMAGE PLACEHOLDER — CodeCover installation error]
-```
+*Figure X: Installation steps for the CodeCover Eclipse plugin using the Eclipse update mechanism.*
 
 Because of this installation failure, CodeCover could not be used for the coverage analysis. 
 
