@@ -233,11 +233,9 @@ for (int c2 = 0; c2 > columnCount; c2++)
 
 Since `columnCount` cannot be negative, the loop condition is never satisfied, making this loop unreachable.
 
-*(Insert Screenshot – Infeasible loop in calculateRowTotal)*
+![Unreachable loop in calculateRowTotal](images/image2.png)
 
-```text
-[ IMAGE PLACEHOLDER – calculateRowTotal infeasible loop ]
-```
+*Figure : Infeasible loop in `calculateRowTotal` caused by the condition `c2 > columnCount`, which prevents the loop from executing.*
 
 #### getCumulativePercentages
 
