@@ -249,11 +249,7 @@ for (int i2 = 0; i2 > data.getItemCount(); i2++)
 
 Because `data.getItemCount()` represents the number of items in the dataset and cannot be negative, the condition is never satisfied, resulting in an unreachable loop body.
 
-*(Insert Screenshot – Infeasible loop in getCumulativePercentages)*
-
-```text
-[ IMAGE PLACEHOLDER – getCumulativePercentages infeasible loop ]
-```
+![Figure : Unreachable loop in getCumulativePercentages](images/image1.png)
 
 These infeasible paths reduce the maximum achievable structural coverage for the methods.
 
